@@ -28,7 +28,7 @@ button, a{
     --muted: #a79eaa;
     --accent: #c8ebff;
     --accent-light: #efb6ff;
-    --border: rgba(255, 255 255, 0.12)
+    --border: rgba(255, 255 255, 0.12);
     --serif: "Playfair Display", serif;
 }
 
@@ -78,7 +78,7 @@ header{
     font-weight: 700;
     letter-spacing: 4px;
 }
-.logo span, footer-logo span{
+.logo span, .footer-logo span{
     color: var(--accent);
 }
 nav{
@@ -910,4 +910,439 @@ footer p{
     justify-content: space-between;
     color: var(--muted);
     font-size: 11px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1000px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    nav {
+        gap: 16px;
+        font-size: 11px;
+    }
+
+    .nav-button {
+        padding: 10px 13px;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 25px;
+    }
+
+    .hero-content {
+        width: 55%;
+    }
+
+    .hero-visual {
+        width: 40%;
+        min-width: 0;
+    }
+
+    .hero-card {
+        width: min(100%, 300px);
+    }
+
+    .about-content {
+        gap: 45px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skill-item {
+        padding: 28px;
+    }
+
+    .experience-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .contact-box {
+        padding: 50px;
+    }
+}
+
+/* Phones and smaller screens */
+@media (max-width: 650px) {
+    /* Header and navigation */
+    header {
+        height: auto;
+        min-height: 0;
+        padding: 14px 5%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .nav-button {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    header nav {
+        order: 3;
+        width: 100%;
+        display: flex;
+        gap: 22px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 5px 0 8px;
+        scrollbar-width: thin;
+    }
+
+    header nav a {
+        flex-shrink: 0;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding: 175px 6% 90px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 35px;
+    }
+
+    .hero-content,
+    .hero-visual {
+        width: 100%;
+    }
+
+    .eyebrow,
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 58px);
+        letter-spacing: -2px;
+        line-height: 1.05;
+        overflow-wrap: break-word;
+    }
+
+    .hero-description {
+        margin-top: 22px;
+        font-size: 14px;
+    }
+
+    .hero-button {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .primary-button,
+    .secondary-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 16px;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-visual {
+        height: 350px;
+    }
+
+    .hero-card {
+        width: min(78%, 270px);
+        height: 320px;
+        padding: 20px;
+    }
+
+    .card-center strong {
+        font-size: 35px;
+    }
+
+    .card-center span {
+        letter-spacing: 3px;
+    }
+
+    .orb-one {
+        right: 5px;
+        width: 180px;
+        height: 180px;
+    }
+
+    .orb-two {
+        left: 5px;
+    }
+
+    .scroll-indicator {
+        left: 6%;
+        bottom: 30px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    /* All main sections */
+    section {
+        padding: 75px 6%;
+    }
+
+    section h2 {
+        font-size: clamp(36px, 9vw, 52px);
+        letter-spacing: -2px;
+        line-height: 1.05;
+    }
+
+    /* About */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 35px;
+    }
+
+    .large-text {
+        font-size: 19px;
+    }
+
+    .about-text p:not(.large-text) {
+        font-size: 14px;
+    }
+
+    /* Project section: keep existing card styling */
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-info-p {
+        font-size: 25px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Skills */
+    .skills-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+
+    .skills-heading p {
+        line-height: 1.7;
+        font-size: 14px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-item {
+        min-height: 0;
+        padding: 25px;
+    }
+
+    .skill-item h3 {
+        margin-top: 22px;
+        font-size: 22px;
+    }
+
+    .skill-item p {
+        font-size: 14px;
+    }
+
+    /* Experience */
+    .experience-item {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 15px;
+        padding: 28px 0;
+    }
+
+    .experience-item:hover {
+        padding-left: 0;
+    }
+
+    .experience-heading {
+        gap: 10px;
+    }
+
+    .experience-heading h3 {
+        font-size: 20px;
+    }
+
+    .experience-heading p {
+        font-size: 10px;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+
+    .experience-content > p {
+        font-size: 14px;
+    }
+
+    /* Contact */
+    .contact {
+        padding-bottom: 65px;
+    }
+
+    .contact-box {
+        padding: 28px 20px;
+    }
+
+    .contact-box h2 {
+        margin: 22px 0;
+    }
+
+    .contact-box p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 35px 6%;
+    }
+
+    .footer-logo {
+        font-size: 22px;
+    }
+
+    .footer-button {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 30px;
+        line-height: 1.6;
+    }
+
+    .cursor {
+        display: none;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-button {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-button a {
+        width: 100%;
+    }
+
+    .hero-card {
+        width: 85%;
+        height: 290px;
+    }
+
+    .contact-box {
+        padding: 24px 15px;
+    }
+}
+
+/* MOBILE NAVIGATION MENU */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 9px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Turn the three lines into an X */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* PHONE AND TABLET HEADER */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        order: 3;
+        padding: 12px 0;
+        margin-top: 15px;
+        background: #111;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 13px 5px;
+        font-size: 14px;
+    }
+
+    .nav-button {
+        display: none;
+    }
 }
