@@ -1,0 +1,112 @@
+:root {
+        --blue: #315fff;
+        --dark: #10182b;
+        --muted: #68738a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: Arial, sans-serif;
+        color: var(--dark);
+        background: #f7f9ff;
+        line-height: 1.6;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 7%;
+        background: white;
+        border-bottom: 1px solid #edf0f7;
+    }
+    .logo { font-size: 27px; font-weight: bold; color: var(--dark); }
+    .logo span { color: var(--blue); }
+    nav a { color: var(--blue); text-decoration: none; font-weight: bold; }
+    .hero {
+        padding: 75px 7%;
+        background: linear-gradient(120deg, #edf2ff, #fff 75%);
+    }
+    .eyebrow {
+        color: var(--blue);
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    h1 { font-size: clamp(36px, 6vw, 60px); line-height: 1.1; margin: 15px 0; }
+    h1 span { color: var(--blue); }
+    .hero p { max-width: 600px; color: var(--muted); }
+    .search {
+        display: flex;
+        max-width: 650px;
+        margin-top: 28px;
+        padding: 7px;
+        background: white;
+        border: 1px solid #e1e7f5;
+        border-radius: 10px;
+    }
+    .search input {
+        flex: 1;
+        min-width: 0;
+        padding: 13px;
+        border: 0;
+        outline: none;
+    }
+    button {
+        padding: 12px 20px;
+        border: 0;
+        border-radius: 7px;
+        background: var(--blue);
+        color: white;
+        font-weight: bold;
+    }
+    main { padding: 55px 7%; }
+    h2 { margin-bottom: 10px; font-size: 28px; }
+    .intro { color: var(--muted); margin-bottom: 25px; }
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-bottom: 55px;
+    }
+    .category {
+        padding: 20px;
+        border: 1px solid #e5eafa;
+        background: white;
+        border-radius: 12px;
+    }
+    .category b { display: block; margin-bottom: 4px; }
+    .category span { color: var(--muted); font-size: 13px; }
+    .listings {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 25px;
+    }
+    .card {
+        padding: 23px;
+        background: white;
+        border: 1px solid #e5eafa;
+        border-radius: 14px;
+        transition: .25s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px #15244d12; }
+    .tag {
+        display: inline-block;
+        padding: 5px 10px;
+        background: #edf1ff;
+        color: var(--blue);
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    .card h3 { margin: 17px 0 8px; }
+    .card p { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+    .card a { display: inline-block; margin-top: 12px; color: var(--blue); text-decoration: none; font-weight: bold; }
+    .note { margin-top: 22px; color: var(--muted); font-size: 12px; }
+    footer { padding: 25px; text-align: center; background: var(--dark); color: white; font-size: 13px; }
+    @media (max-width: 750px) {
+        .categories, .listings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 480px) {
+        nav, .hero, main { padding-left: 5%; padding-right: 5%; }
+        .categories, .listings { grid-template-columns: 1fr; }
+        .search button { padding: 10px; }
+    }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FocusFlow | Your Personal Space</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="logo">✳ Focus<span>Flow</span></div>
+
+        <p class="menu-label">WORKSPACE</p>
+        <nav class="menu">
+            <a href="#home" class="active">⌂ Home</a>
+            <a href="#tasks">□ Tasks</a>
+            <a href="#week">▦ Week</a>
+            <a href="#focus">◷ Focus</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <strong>✦ A little reminder</strong>
+            <p>Progress doesn't have to be perfect. One step at a time is still progress.</p>
+        </div>
+    </aside>
+
+    <main id="home">
+        <div class="topbar">
+            <p>MY PERSONAL WORKSPACE / 2026</p>
+            <div class="avatar">R</div>
+        </div>
+
+        <header class="welcome">
+            <small>YOUR SPACE TO GROW</small>
+            <h1>Make today count. ✨</h1>
+            <p>Organise your thoughts, focus on what matters, and celebrate your progress.</p>
+        </header>
+
+        <section class="stats">
+            <div class="panel">
+                <p class="stat-label">Tasks completed</p>
+                <div class="stat-value">08</div>
+                <p class="stat-note">Keep building momentum</p>
+            </div>
+            <div class="panel">
+                <p class="stat-label">Focus sessions</p>
+                <div class="stat-value">04</div>
+                <p class="stat-note">Every session counts</p>
+            </div>
+            <div class="panel">
+                <p class="stat-label">Weekly progress</p>
+                <div class="stat-value">65%</div>
+                <p class="stat-note">You're making progress</p>
+            </div>
+        </section>
+
+        <section class="dashboard">
+            <div>
+                <div class="panel" id="tasks">
+                    <h2>Today's tasks</h2>
+                    <p class="panel-intro">Choose your next small step.</p>
+
+                    <div class="task">
+                        <input type="checkbox" id="task1">
+                        <label for="task1">Study project management</label>
+                        <small>9:00 AM</small>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="task2">
+                        <label for="task2">Practise Adobe XD</label>
+                        <small>11:00 AM</small>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="task3">
+                        <label for="task3">Work on portfolio</label>
+                        <small>2:00 PM</small>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="task4">
+                        <label for="task4">Review today's learning</label>
+                        <small>5:00 PM</small>
+                    </div>
+                </div>
+
+                <div class="panel week" id="week">
+                    <h2>Your week</h2>
+                    <p class="panel-intro">An example of a weekly focus overview.</p>
+                    <div class="week-bars">
+                        <div class="day"><div class="bar" style="height:35px"></div><p>Mon</p></div>
+                        <div class="day"><div class="bar" style="height:65px"></div><p>Tue</p></div>
+                        <div class="day"><div class="bar" style="height:45px"></div><p>Wed</p></div>
+                        <div class="day"><div class="bar" style="height:80px"></div><p>Thu</p></div>
+                        <div class="day"><div class="bar" style="height:55px"></div><p>Fri</p></div>
+                        <div class="day"><div class="bar" style="height:25px"></div><p>Sat</p></div>
+                        <div class="day"><div class="bar" style="height:40px"></div><p>Sun</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel timer-panel" id="focus">
+                <h2>Focus space</h2>
+                <p class="panel-intro">Give one task your attention.</p>
+                <div class="timer-circle">
+                    <strong>25:00</strong>
+                    <span>MINUTES</span>
+                </div>
+                <p>A quiet moment to concentrate<br>on what matters most.</p>
+                <span class="timer-button">Focus session preview</span>
+            </div>
+        </section>
+
+        <a class="portfolio-link" href="../../index.html#projects">← Back to my portfolio</a>
+    </main>
+</div>
+</body>
+</html>
